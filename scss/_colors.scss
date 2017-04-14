@@ -1,0 +1,40 @@
+$colorWhite: #ecf0f1;
+$colorGreen: #27ae60;
+$colorBlack: #2c3e50;
+$colorBlue: #2980b9;
+$colorRed: #c0392b;
+$colorYellow: #f39c12;
+$colorOrange: #d35400;
+$colorGray: #bdc3c7;
+$colorBrown: #795548; 
+
+$buttonDefaultBgColor: $colorWhite;
+$buttonDefaultBgColorHover: darken($buttonDefaultBgColor, 5%);
+$buttonDefaultBorder: 1px solid $colorWhite;
+$buttonDefaultBorderHover: 1px solid darken($buttonDefaultBgColor, 5%);
+$buttonDefaultTextColor: $colorBlack;
+
+$buttonPrimaryBgColor: $colorGreen;
+$buttonPrimaryBgColorHover: darken($buttonPrimaryBgColor, 5%);
+$buttonPrimaryBorder: 1px solid $colorGreen;
+$buttonPrimaryBorderHover: 1px solid darken($buttonPrimaryBgColor, 5%);
+$buttonPrimaryTextColor: $colorWhite;
+
+$buttonSecondaryBgColor: $colorBlue;
+$buttonSecondaryBgColorHover: darken($buttonSecondaryBgColor, 5%);
+$buttonSecondaryBorder: 1px solid $colorBlue;
+$buttonSecondaryBorderHover: 1px solid darken($buttonSecondaryBgColor, 5%);
+$buttonSecondaryTextColor: $colorWhite;
+
+$buttonAttentionBgColor: $colorYellow;
+$buttonAttentionBgColorHover: darken($buttonAttentionBgColor, 5%);
+$buttonAttentionBorder: 1px solid $colorYellow;
+$buttonAttentionBorderHover: 1px solid darken($buttonAttentionBgColor, 5%);
+$buttonAttentionTextColor: $colorBlack;
+
+$buttonWarningBgColor: $colorRed;
+$buttonWarningBgColorHover: darken($buttonWarningBgColor, 5%);
+$buttonWarningBorder: 1px solid $colorRed;
+$buttonWarningBorderHover: 1px solid darken($buttonWarningBgColor, 5%);
+$buttonWarningTextColor: $colorWhite;
+

@@ -1,0 +1,107 @@
+@import "_colors.scss";
+@import "_variables.scss";
+
+//border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+//box_shadow
+@mixin box_shadow ($level) {
+
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+
+}
+//transform
+@mixin transformTranslateY($values) {
+    -ms-transform: translateY($values);
+    transform: translateY($values);
+}
+//transition
+@mixin transition($prop, $values...) {
+  -moz-#{$prop}: $values;
+  -ms-#{$prop}: $values;
+  -o-#{$prop}: $values;
+  -webkit-#{$prop}: $values;
+  $prop: $values;
+}
+// button mixin
+@mixin button() {
+    padding: $defaultMarginTopBottom $defaultMarginLeftRight*3;
+    outline: none;
+    cursor: pointer;
+    @include border-radius(2px);
+    @include box_shadow(1);
+    &:hover, &:focus {
+        @include box_shadow(2);
+        @include transition(all, 250ms);
+        @include transformTranslateY(-1px);
+    }
+}
+// buttonDefault mixin
+@mixin buttonDefault() {
+    @include button;
+    background-color: $buttonDefaultBgColor;
+    border: $buttonDefaultBorder;
+    color: $buttonDefaultTextColor;
+    &:hover, &:focus {
+        background-color: $buttonDefaultBgColorHover;
+        border: $buttonDefaultBorderHover;
+    }
+}
+// buttonPrimary mixin
+@mixin buttonPrimary() {
+    @include button;
+    background-color: $buttonPrimaryBgColor;
+    border: $buttonPrimaryBorder;
+    color: $buttonPrimaryTextColor;
+    &:hover, &:focus {
+        background-color: $buttonPrimaryBgColorHover;
+        border: $buttonPrimaryBorderHover;
+    }
+}
+// buttonSecondary mixin
+@mixin buttonSecondary() {
+    @include button;
+    background-color: $buttonSecondaryBgColor;
+    border: $buttonSecondaryBorder;
+    color: $buttonSecondaryTextColor;
+    &:hover, &:focus {
+        background-color: $buttonSecondaryBgColorHover;
+        border: $buttonSecondaryBorderHover;
+    }
+}
+// buttonAttention mixin
+@mixin buttonAttention() {
+    @include button;
+    background-color: $buttonAttentionBgColor;
+    border: $buttonAttentionBorder;
+    color: $buttonAttentionTextColor;
+    &:hover, &:focus {
+        background-color: $buttonAttentionBgColorHover;
+        border: $buttonAttentionBorderHover;
+    }
+}
+// buttonWarning mixin
+@mixin buttonWarning() {
+    @include button;
+    background-color: $buttonWarningBgColor;
+    border: $buttonWarningBorder;
+    color: $buttonWarningTextColor;
+    &:hover, &:focus {
+        background-color: $buttonWarningBgColorHover;
+        border: $buttonWarningBorderHover;
+    }
+}

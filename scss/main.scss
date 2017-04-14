@@ -1,0 +1,53 @@
+@import "_mixins.scss";
+@import "_colors.scss";
+@import "_buttons.scss";
+@import "_variables.scss";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $defaultFontSize;
+    color: $defaulitFontColor;
+    background-color: $colorWhite;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.title {
+    font-size: $titleFontSize;
+}
+
+/* Some typography rules */
+h1, h2, h3, h4 {
+    margin-top: 1.375rem;
+    margin-bottom: 1.375rem;
+}
+
+h1 {
+    font-size: 2.125rem;
+    line-height: 2.75rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+    line-height: 2.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+}
+
+p {
+    padding: $defaultPaddingTopBottom $defaultMarginLeftRight * 2;
+    margin: $defaultMarginTopBottom 0;
+    line-height: $defaultLineHeight * 3;
+}
